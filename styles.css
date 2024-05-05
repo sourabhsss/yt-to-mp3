@@ -1,0 +1,116 @@
+/* Base and General Layout */
+body, html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Form and Input Styling */
+input[type="text"], button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Media Queries for Responsive Adjustments */
+@media (min-width: 600px) {
+    input[type="text"] {
+        width: calc(100% - 140px); /* Adjust width */
+        margin-right: 10px;
+    }
+    button {
+        width: 130px;
+    }
+}
+
+/* Video Preview and Title */
+#videoPreview {
+    display: none; /* Initially hidden */
+    text-align: center;
+    margin-top: 20px;
+}
+
+#videoPreview img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+#videoTitle {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Download Options and Animation */
+#audioOptions button {
+    display: inline-block;
+    margin: 5px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 4px;
+    padding: 8px 12px;
+}
+
+#audioOptions button:hover {
+    background-color: #218838;
+}
+
+#status {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #666;
+}
+.loader {
+    display: inline-block;
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top-color: #3498db;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+#status.loading {
+    display: block;
+    text-align: center;
+    padding: 10px;
+}
